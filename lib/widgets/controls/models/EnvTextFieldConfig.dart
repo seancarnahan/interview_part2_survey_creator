@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
+import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 
 class EnvTextFieldConfig {
   final Widget? prefix;
@@ -11,6 +12,7 @@ class EnvTextFieldConfig {
   final String hintText;
   final TextStyle? inputTextStyle;
   final bool autoFocus;
+  final Color color;
   final List<TextInputFormatter>? additionalFormatter;
   
   EnvTextFieldConfig({
@@ -22,6 +24,7 @@ class EnvTextFieldConfig {
     this.hintText = '',
     this.inputTextStyle,
     this.autoFocus=false,
+    this.color=BrandedColors.secondary500,
     this.additionalFormatter
   });
 }

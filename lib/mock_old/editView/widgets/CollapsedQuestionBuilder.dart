@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
-import 'package:interview_survey_creator_simple/providers/SurveyProvider.dart';
+import 'package:interview_survey_creator_simple/mock_old/SurveyProvider.dart';
 
 import 'CollapsedQuestion.dart';
 import 'RemoveQuestionButton.dart';

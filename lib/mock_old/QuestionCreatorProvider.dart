@@ -4,7 +4,7 @@ import 'package:interview_survey_creator_simple/models/SurveyQuestionMultipleCho
 import 'package:interview_survey_creator_simple/models/SurveyQuestionNumber.dart';
 import 'package:interview_survey_creator_simple/models/SurveyQuestionText.dart';
 import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
-import 'package:interview_survey_creator_simple/providers/SurveyProvider.dart';
+import 'package:interview_survey_creator_simple/mock_old/SurveyProvider.dart';
 
 class QuestionCreatorProvider extends ChangeNotifier {
   SurveyQuestionable question;

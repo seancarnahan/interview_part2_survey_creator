@@ -31,7 +31,7 @@ class EnvTextField extends StatelessWidget {
       maxLength: config.maxLength,
       decoration: InputDecoration(
         filled: true,
-        fillColor: BrandedColors.secondary500,
+        fillColor: config.color,
         prefixIcon: config.prefix != null ?
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),

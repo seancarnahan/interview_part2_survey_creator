@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/constants/DesktopContstraints.dart';
+import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/FoldersHeader.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 
 class FoldersView extends StatelessWidget {
@@ -18,13 +19,13 @@ class FoldersView extends StatelessWidget {
         color: BrandedColors.secondary500,
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const [
-            ListTile(
-              title: Text('Item 1'),
-            ),
-            ListTile(
-              title: Text('Item 2'),
-            ),
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                FoldersHeader()
+              ],
+            )
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
-import 'package:interview_survey_creator_simple/providers/QuestionCreatorProvider.dart';
+import 'package:interview_survey_creator_simple/mock_old/QuestionCreatorProvider.dart';
 import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetector.dart';

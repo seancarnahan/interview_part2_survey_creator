@@ -7,9 +7,9 @@ import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedTextStyle.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/EnvTextField.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextFieldConfig.dart';
-import 'package:interview_survey_creator_simple/providers/SurveyProvider.dart';
+import 'package:interview_survey_creator_simple/mock_old/SurveyProvider.dart';
 
-import '../../../providers/QuestionCreatorProvider.dart';
+import '../../QuestionCreatorProvider.dart';
 import 'SurveyQuestionTypeDropdown.dart';
 
 class SurveyQuestionCreator extends StatelessWidget {

@@ -14,7 +14,7 @@ class EnvMobileScaffold extends StatelessWidget {
       drawer: const Drawer(
         backgroundColor: BrandedColors.secondary500,
         width: DrawerMaxWidth,
-        child: FoldersView(),
+        child: FoldersView(), // TODO: add exit drawer btn
       ),
       appBar: AppBar(
         toolbarHeight: 72,
@@ -35,7 +35,11 @@ class EnvMobileScaffold extends StatelessWidget {
               )
             ),
             const SizedBox(width: 8),
-            const Image(image: AssetImage('assets/Enveritas.png'))
+            const Image(
+              width: 112,
+              height: 24,
+              image: AssetImage('assets/Enveritas.png')
+            )
           ],
         )
       ),
