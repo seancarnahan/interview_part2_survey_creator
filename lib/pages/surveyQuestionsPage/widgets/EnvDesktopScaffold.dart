@@ -12,7 +12,7 @@ class EnvDesktopScaffold extends StatelessWidget {
       body: Row(
         children: const [
           Flexible(
-            child: FoldersView(),
+            child: FoldersView()
           ),
           Expanded(
             child: QuestionBuilderView(),

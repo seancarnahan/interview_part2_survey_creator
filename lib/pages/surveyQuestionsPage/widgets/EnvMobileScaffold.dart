@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/constants/DesktopContstraints.dart';
 import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/FoldersView.dart';
 import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/questionBuilderView/QuestionBuilderView.dart';
+import 'package:interview_survey_creator_simple/services/ScreenSizeService.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetector.dart';
 
@@ -13,7 +13,7 @@ class EnvMobileScaffold extends StatelessWidget {
     return Scaffold(
       drawer: const Drawer(
         backgroundColor: BrandedColors.secondary500,
-        width: DrawerMaxWidth,
+        width: ScreenSizeService.DrawerMaxWidth,
         child: FoldersView(), // TODO: add exit drawer btn
       ),
       appBar: AppBar(
