@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/previewView/widgets/PreviewQuestionTitle.dart';
+import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionTitle.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 
 class PreviewQuestionContainer extends StatelessWidget {

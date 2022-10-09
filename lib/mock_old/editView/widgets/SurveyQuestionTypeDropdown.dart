@@ -4,7 +4,7 @@ import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/EnvDropdown.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvDropdownConfig.dart';
 
-import '../../../../../providers/QuestionCreatorProvider.dart';
+import '../../../providers/QuestionCreatorProvider.dart';
 
 class SurveyQuestionTypeDropdown extends StatelessWidget {
   const SurveyQuestionTypeDropdown({Key? key}) : super(key: key);

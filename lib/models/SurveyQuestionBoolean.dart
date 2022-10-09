@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/previewView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/EnvRadioButtonController.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvRadioButtonConfig.dart';
 import 'SurveyQuestionable.dart';

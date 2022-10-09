@@ -9,7 +9,7 @@ import 'package:interview_survey_creator_simple/widgets/controls/EnvTextField.da
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextFieldConfig.dart';
 import 'package:interview_survey_creator_simple/providers/SurveyProvider.dart';
 
-import '../../../../../providers/QuestionCreatorProvider.dart';
+import '../../../providers/QuestionCreatorProvider.dart';
 import 'SurveyQuestionTypeDropdown.dart';
 
 class SurveyQuestionCreator extends StatelessWidget {
