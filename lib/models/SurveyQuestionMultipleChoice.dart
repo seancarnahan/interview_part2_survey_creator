@@ -10,6 +10,7 @@ import 'package:interview_survey_creator_simple/widgets/controls/EnvTextField.da
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvRadioButtonConfig.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextFieldConfig.dart';
 
+import 'SurveyItemable.dart';
 import 'SurveyQuestionable.dart';
 
 class SurveyQuestionMultipleChoice implements SurveyQuestionable {
@@ -113,10 +114,13 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
   }
 
   @override
-  Widget buildGroupItem(int numIndents) {
+  Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
       question: this
     );
   }
+
+  @override
+  SurveyItemTypes get itemType => SurveyItemTypes.Question;
 }

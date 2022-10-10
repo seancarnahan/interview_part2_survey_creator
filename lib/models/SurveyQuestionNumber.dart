@@ -7,6 +7,7 @@ import 'package:interview_survey_creator_simple/widgets/controls/models/NumberFo
 
 // import '../widgets/controls/models/CustomNumberRangeFormatter.dart';
 import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
+import 'SurveyItemable.dart';
 import 'SurveyQuestionable.dart';
 
 class SurveyQuestionNumber implements SurveyQuestionable {
@@ -72,10 +73,13 @@ class SurveyQuestionNumber implements SurveyQuestionable {
   }
 
   @override
-  Widget buildGroupItem(int numIndents) {
+  Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
       question: this
     );
   }
+
+  @override
+  SurveyItemTypes get itemType => SurveyItemTypes.Question;
 }

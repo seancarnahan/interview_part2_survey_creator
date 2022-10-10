@@ -2,10 +2,12 @@
 
 import 'package:flutter/material.dart';
 
-import 'SurveyGroupable.dart';
+import 'SurveyItemable.dart';
 
-abstract class SurveyQuestionable implements SurveyGroupable {
+abstract class SurveyQuestionable implements SurveyItemable {
   String title;
+
+  final SurveyItemTypes itemType = SurveyItemTypes.Question;
 
   SurveyQuestionable({
     required this.title,

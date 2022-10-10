@@ -80,7 +80,7 @@ class _QuestionFolderState extends State<QuestionFolder> {
               return Padding(
                 key: ValueKey(widget.folder.items[index]),
                 padding: EdgeInsets.only(left: 24.0 * widget.numIndents),
-                child: widget.folder.items[index].buildGroupItem(widget.numIndents + 1),
+                child: widget.folder.items[index].buildItem(widget.numIndents + 1),
               );
             },
           )

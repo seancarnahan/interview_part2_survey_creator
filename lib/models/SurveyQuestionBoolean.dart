@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_survey_creator_simple/models/SurveyItemable.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/EnvRadioButtonController.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvRadioButtonConfig.dart';
 import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
@@ -46,10 +47,13 @@ class SurveyQuestionBoolean implements SurveyQuestionable {
   }
 
   @override
-  Widget buildGroupItem(int numIndents) {
+  Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
       question: this
     );
   }
+
+  @override
+  SurveyItemTypes get itemType => SurveyItemTypes.Question;
 }
