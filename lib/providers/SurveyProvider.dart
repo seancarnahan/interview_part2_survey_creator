@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/models/Survey.dart';
+import 'package:interview_part2_survey_creator/models/SurveyFolder.dart';
 import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
 
 /*
@@ -9,9 +10,13 @@ import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
  * Using Singleton to avoid routing params and so I can access provider w/out consuming it
  * Otherwise accessing the Provider would have to have your widget also consume and be updated by it
  */
+
+// TODO: Move different states into separate providers -> too much control from a single provider
 class SurveyProvider extends ChangeNotifier {
   Survey survey = Survey(items: []);
   SurveyQuestionable? selectedQuestion;
+  bool isAddingQuestion = false;
+  bool isAddingFolder = false;
 
   static final SurveyProvider _surveyProvider = SurveyProvider._internal();
 
@@ -26,8 +31,23 @@ class SurveyProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // TODO: Each Folder would have its own Provider where they can update the state of the folder for isAdding
+  void updateIsAddingFolderToRoot(bool isAdding) {
+    isAddingFolder = isAdding;
+  }
+
+  // TODO: Each Folder would have its own Provider where they can update the state of the folder for isAdding
+  void updateIsAddingQuestionToRoot(bool isAdding) {
+    isAddingQuestion = isAdding;
+  }
+
   void addQuestion(SurveyQuestionable question) {
     survey.items.add(question);
+    notifyListeners();
+  }
+
+  void addFolder(SurveyFolder folder) {
+    survey.items.add(folder);
     notifyListeners();
   }
 

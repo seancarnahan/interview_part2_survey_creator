@@ -14,13 +14,14 @@ class SurveyQuestionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isMobile = MediaQuery.of(context).size.width < ScreenSizeService.MobileBreakpointDown;
-    // return Provider(
-    //   create: () => SurveyProvider()
-    // );
-
-    if (isMobile) {
-      return const EnvMobileScaffold();
-    }
-    return const EnvDesktopScaffold();
+    return ChangeNotifierProvider<SurveyProvider>(
+      create: (context) => SurveyProvider(),
+      builder: (context, child) {
+        if (isMobile) {
+          return const EnvMobileScaffold();
+        }
+        return const EnvDesktopScaffold();
+      },
+    );
   }
 }

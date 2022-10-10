@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
 import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
 import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/EnvDropdownIcon.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/EnvDropdownConfig.dart';
 
 class AddFolderOrFile extends StatelessWidget {
   const AddFolderOrFile({Key? key}) : super(key: key);
@@ -10,13 +14,22 @@ class AddFolderOrFile extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        EnvGestureDetector(
-          onTap: () => print('object'),
-          child: const Icon(
-            Icons.add,
-            size: 24,
-            color: BrandedColors.black500,
-          )
+        EnvDropdownIcon(
+          config: EnvDropdownConfig(
+            items: {
+              'Create New Question': SurveyItemTypes.Question,
+              'Create New Folder': SurveyItemTypes.Folder
+            },
+            onChanged: (itemType) {
+              if (itemType == SurveyItemTypes.Question) {
+                SurveyProvider().updateIsAddingQuestionToRoot(true);
+              } else {
+                SurveyProvider().updateIsAddingFolderToRoot(true);
+              }
+            },
+          ),
+          icon: Icons.add,
+          size: 24,
         ),
         const SizedBox(width: 24),
       ],
