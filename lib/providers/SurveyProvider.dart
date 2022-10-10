@@ -34,16 +34,17 @@ class SurveyProvider extends ChangeNotifier {
   // TODO: Each Folder would have its own Provider where they can update the state of the folder for isAdding
   void updateIsAddingFolderToRoot(bool isAdding) {
     isAddingFolder = isAdding;
+    notifyListeners();
   }
 
   // TODO: Each Folder would have its own Provider where they can update the state of the folder for isAdding
   void updateIsAddingQuestionToRoot(bool isAdding) {
     isAddingQuestion = isAdding;
+    notifyListeners();
   }
 
   void addQuestion(SurveyQuestionable question) {
     survey.items.add(question);
-    notifyListeners();
   }
 
   void addFolder(SurveyFolder folder) {

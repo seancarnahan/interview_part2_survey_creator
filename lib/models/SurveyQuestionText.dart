@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interview_part2_survey_creator/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
 import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/questionBuilderView/widgets/PreviewQuestionContainer.dart';
 import 'package:interview_part2_survey_creator/services/KeyboardService.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/EnvTextField.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/models/EnvTextFieldConfig.dart';

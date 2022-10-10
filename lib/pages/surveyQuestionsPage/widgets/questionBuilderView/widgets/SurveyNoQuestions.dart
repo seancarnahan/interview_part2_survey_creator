@@ -23,7 +23,7 @@ class SurveyNoQuestions extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              'This Survey has no Questions yet.',
+              'This survey has no questions',
               textAlign: TextAlign.center,
               style: BrandedTextStyle.b1Reg(BrandedColors.black500)
             )
