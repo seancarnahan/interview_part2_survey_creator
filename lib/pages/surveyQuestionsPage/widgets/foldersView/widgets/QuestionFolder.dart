@@ -6,8 +6,9 @@ import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetecto
 
 // TODO: breakdown into smaller widgets
 class QuestionFolder extends StatefulWidget {
+  final int numIndents;
   final SurveyFolder folder;
-  const QuestionFolder({Key? key, required this.folder}) : super(key: key);
+  const QuestionFolder({Key? key, required this.folder, required this.numIndents}) : super(key: key);
 
   @override
   State<QuestionFolder> createState() => _QuestionFolderState();
@@ -37,10 +38,10 @@ class _QuestionFolderState extends State<QuestionFolder> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(right: 8),
+                      padding: const EdgeInsets.only(right: 24),
                       child: Icon(
                         isExpanded ? Icons.expand_more : Icons.chevron_right,
-                        size: 16,
+                        size: 24,
                         color: BrandedColors.black500,
                       )
                     ),
@@ -76,7 +77,11 @@ class _QuestionFolderState extends State<QuestionFolder> {
               print('Reorder has occured');
             },
             itemBuilder: (context, index) {
-              return widget.folder.items[index].buildGroupItem();
+              return Padding(
+                key: ValueKey(widget.folder.items[index]),
+                padding: EdgeInsets.only(left: 24.0 * widget.numIndents),
+                child: widget.folder.items[index].buildGroupItem(widget.numIndents + 1),
+              );
             },
           )
         )

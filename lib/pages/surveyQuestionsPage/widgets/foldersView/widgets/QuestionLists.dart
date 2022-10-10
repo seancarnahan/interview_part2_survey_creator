@@ -20,7 +20,7 @@ class QuestionLists extends StatelessWidget {
       },
       itemBuilder: (context, index) {
         SurveyQuestionable question = SurveyQuestionBoolean(
-          'Is this statement sdfnjsdfnj  ',
+          'Is this statement sdfnjsdfnj ff f f f f f f f f  f f ',
           1
         );
         return Builder(
@@ -33,7 +33,10 @@ class QuestionLists extends StatelessWidget {
               );
             }
             if (index == 1) {
-              return QuestionFolder(folder: SurveyFolder('name', [question]));
+              return QuestionFolder(
+                numIndents: 1,
+                folder: SurveyFolder('name', [SurveyFolder('next', [question])])
+              );
             }
             return QuestionFile(question: question);
           }

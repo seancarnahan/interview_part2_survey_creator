@@ -9,7 +9,7 @@ class SurveyFolder implements SurveyGroupable {
   SurveyFolder(this.name, this.items);
 
   @override
-  Widget buildGroupItem() {
-    return QuestionFolder(folder: this);
+  Widget buildGroupItem(int numIndents) {
+    return QuestionFolder(numIndents: numIndents, folder: this);
   }
 }

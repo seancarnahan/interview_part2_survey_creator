@@ -72,10 +72,9 @@ class SurveyQuestionNumber implements SurveyQuestionable {
   }
 
   @override
-  Widget buildGroupItem() {
+  Widget buildGroupItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
-      key: ValueKey(this),
       question: this
     );
   }

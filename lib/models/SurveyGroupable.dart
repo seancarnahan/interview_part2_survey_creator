@@ -2,5 +2,5 @@ import 'package:flutter/material.dart';
 
 abstract class SurveyGroupable {
 
-  Widget buildGroupItem();
+  Widget buildGroupItem(int numIndents);
 }
