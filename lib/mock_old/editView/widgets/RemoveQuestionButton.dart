@@ -16,7 +16,8 @@ class RemoveQuestionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return EnvGestureDetector(
-      onTap: () => surveyProvider.removeQuestionByRank(question.rank),
+      // onTap: () => surveyProvider.removeQuestionByRank(question.rank),
+      onTap: () => print('TODO: use index for removal instead'),
       child: const Icon(
         Icons.do_not_disturb_on,
         size: 32,

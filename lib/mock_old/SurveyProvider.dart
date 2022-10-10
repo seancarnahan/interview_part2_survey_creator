@@ -30,12 +30,10 @@ class SurveyProvider extends ChangeNotifier {
 
   void updateIsEditing(bool isEdit, [bool saveChanges=false]) {
     isCreatingQuestion = false;
-    _assignRanks();
     if (saveChanges) {
       _saveBufferIntoSurvey();
     }
     _resetBuffer();
-    _assignRanks(); // TODO: remove once deep copy is fixed
     isEditing = isEdit;
     notifyListeners();
   }
@@ -45,9 +43,9 @@ class SurveyProvider extends ChangeNotifier {
     updateIsCreatingQuestion(false);
   }
 
-  void removeQuestionByRank(int rank) {
-    bufferSurvey.questions.removeWhere((question) => question.rank == rank);
-    _assignRanks();
+  void removeQuestionByIndex(int rank) {
+    // TODO: use index instead of rank
+    // bufferSurvey.questions.removeWhere((question) => question.rank == rank);
     notifyListeners();
   }
 
@@ -55,27 +53,16 @@ class SurveyProvider extends ChangeNotifier {
     List<SurveyQuestionable> questions = bufferSurvey.questions;
     final SurveyQuestionable question = questions.removeAt(oldQuestionIndex);
     questions.insert(newQuestionIndex, question);
-    _assignRanks();
     notifyListeners();
   }
 
-  // TODO: Fix deep copy issue here -> questions object reference is being copied over
-  // JsonDecode(JSONEncode()) no longer works
   void _resetBuffer() {
     bufferSurvey.questions = [];
     bufferSurvey.questions.addAll(survey.questions);
   }
 
-  // TODO: Fix deep copy issue here -> questions object reference is being copied over
-  // JsonDecode(JSONEncode()) no longer works
   void _saveBufferIntoSurvey() {
     survey.questions = [];
     survey.questions.addAll(bufferSurvey.questions);
-  }
-
-  void _assignRanks() {
-    for (int i = 0; i < bufferSurvey.questions.length; i++) {
-      bufferSurvey.questions[i].rank = i + 1;
-    }
   }
 }

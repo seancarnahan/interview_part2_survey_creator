@@ -6,6 +6,7 @@ import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextF
 import 'package:interview_survey_creator_simple/widgets/controls/models/NumberFormatter.dart';
 
 // import '../widgets/controls/models/CustomNumberRangeFormatter.dart';
+import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
 import 'SurveyQuestionable.dart';
 
 class SurveyQuestionNumber implements SurveyQuestionable {
@@ -67,6 +68,15 @@ class SurveyQuestionNumber implements SurveyQuestionable {
         ),
         onChanged: (value) => {},
       ),
+    );
+  }
+
+  @override
+  Widget buildGroupItem() {
+    // TODO pass SurveyQuestionable type icon -> ex: boolean icon
+    return QuestionFile(
+      key: ValueKey(this),
+      question: this
     );
   }
 }

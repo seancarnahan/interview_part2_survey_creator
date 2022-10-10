@@ -32,23 +32,23 @@ class _CollapsedQuestionState extends State<CollapsedQuestion> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (widget.question.rank != 1)
-                    const SizedBox(height: 24),
-                  RichText(
-                    text: TextSpan(
-                      text: '${widget.question.rank.toString()}.',
-                      style: BrandedTextStyle.b1Reg(BrandedColors.black500),
-                      children: [
-                        const WidgetSpan(
-                          child: SizedBox(width: 8)
-                        ),
-                        TextSpan(
-                          text: widget.question.title,
-                          style: BrandedTextStyle.b3Label(BrandedColors.black500)
-                        )
-                      ]
-                    )
-                  ),
+                  // if (widget.question.rank != 1)
+                  //   const SizedBox(height: 24),
+                  // RichText(
+                  //   text: TextSpan(
+                  //     text: '${widget.question.rank.toString()}.',
+                  //     style: BrandedTextStyle.b1Reg(BrandedColors.black500),
+                  //     children: [
+                  //       const WidgetSpan(
+                  //         child: SizedBox(width: 8)
+                  //       ),
+                  //       TextSpan(
+                  //         text: widget.question.title,
+                  //         style: BrandedTextStyle.b3Label(BrandedColors.black500)
+                  //       )
+                  //     ]
+                  //   )
+                  // ),
                   const SizedBox(height: 24),
                   const Divider(height: 1, color: BrandedColors.black500),
                   Visibility(

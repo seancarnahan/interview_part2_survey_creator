@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 
-abstract class SurveyQuestionable {
+import 'SurveyGroupable.dart';
+
+abstract class SurveyQuestionable implements SurveyGroupable {
   String title;
-  int rank;
 
   SurveyQuestionable({
     required this.title,
-    required this.rank,
   });
 
   // Fetch extra information from the user needed to create the question
@@ -16,7 +16,6 @@ abstract class SurveyQuestionable {
 
   // Creates a preview of what the question will look like
   Widget getPreview();
-
 }
 
 enum SurveyQuestionType {

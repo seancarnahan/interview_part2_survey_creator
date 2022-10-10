@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
 import 'package:interview_survey_creator_simple/mock_old/QuestionCreatorProvider.dart';
+import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
 import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
 import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
 import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetector.dart';
@@ -108,6 +109,15 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
           },
         ),
       ],
+    );
+  }
+
+  @override
+  Widget buildGroupItem() {
+    // TODO pass SurveyQuestionable type icon -> ex: boolean icon
+    return QuestionFile(
+      key: ValueKey(this),
+      question: this
     );
   }
 }

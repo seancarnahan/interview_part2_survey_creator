@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
 import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/EnvTextField.dart';
 import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextFieldConfig.dart';
@@ -35,6 +36,15 @@ class SurveyQuestionText implements SurveyQuestionable {
         ),
         onChanged: (value) => {},
       ),
+    );
+  }
+
+  @override
+  Widget buildGroupItem() {
+    // TODO pass SurveyQuestionable type icon -> ex: boolean icon
+    return QuestionFile(
+      key: ValueKey(this),
+      question: this
     );
   }
 }
