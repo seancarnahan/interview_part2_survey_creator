@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
 import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
-import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
-import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/EnvDropdownIcon.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/models/EnvDropdownConfig.dart';
 
@@ -22,7 +20,7 @@ class AddFolderOrFile extends StatelessWidget {
             },
             onChanged: (itemType) {
               if (itemType == SurveyItemTypes.Question) {
-                SurveyProvider().updateIsAddingQuestionToRoot(true);
+                SurveyProvider().updateIsAddingQuestion(true);
               } else {
                 SurveyProvider().updateIsAddingFolderToRoot(true);
               }

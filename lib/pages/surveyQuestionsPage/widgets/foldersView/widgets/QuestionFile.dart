@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
 import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
 import 'package:interview_part2_survey_creator/styles/BrandedTextStyle.dart';
-import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/EnvDropdownIcon.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/EnvDropdownConfig.dart';
 
 class QuestionFile extends StatelessWidget {
   final SurveyQuestionable question;
@@ -23,7 +25,7 @@ class QuestionFile extends StatelessWidget {
         margin: EdgeInsets.zero,
         child: InkWell(
           splashColor: BrandedColors.gray300,
-          onTap:() => print('TODO: set provider with new selected QuestionFile'),
+          onTap:() => SurveyProvider().updateSelectedQuestion(question),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Row(
@@ -44,14 +46,20 @@ class QuestionFile extends StatelessWidget {
                     style: BrandedTextStyle.b3Label(BrandedColors.black500)
                   ),
                 ),
-                EnvGestureDetector(
-                  onTap: () => print('TODO: open action menu'),
-                  child: const Icon(
-                    Icons.more_vert,
-                    color: BrandedColors.black500,
-                    size: 16,
-                  )
-                )
+                EnvDropdownIcon(
+                  config: EnvDropdownConfig(
+                    items: {
+                      'Delete': QuestionActions.Delete,
+                    },
+                    onChanged: (itemType) {
+                      if (itemType == QuestionActions.Delete) {
+                        SurveyProvider().deleteQuestion(question);
+                      }
+                    },
+                  ),
+                  icon: Icons.more_vert,
+                  size: 16,
+                ),
               ],
             ),
           )

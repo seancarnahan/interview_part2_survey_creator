@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/questionBuilderView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
 import 'package:interview_part2_survey_creator/services/KeyboardService.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/EnvTextField.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/models/EnvTextFieldConfig.dart';
@@ -14,12 +15,9 @@ class SurveyQuestionNumber implements SurveyQuestionable {
   @override
   String title;
 
-  @override
-  int rank;
-
   final SurveyQuestionType type = SurveyQuestionType.Number;
 
-  SurveyQuestionNumber(this.title, this.rank);
+  SurveyQuestionNumber(this.title);
 
   @override
   Widget getForm() {
@@ -56,7 +54,6 @@ class SurveyQuestionNumber implements SurveyQuestionable {
   Widget getPreview() {
     return PreviewQuestionContainer(
       title: title,
-      rank: rank,
       content: EnvTextField(
         config: EnvTextFieldConfig(
           maxLength: 500,
@@ -76,7 +73,8 @@ class SurveyQuestionNumber implements SurveyQuestionable {
   Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
-      question: this
+      question: this,
+      isSelected: identical(SurveyProvider().selectedQuestion, this),
     );
   }
 

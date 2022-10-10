@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
 import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/questionBuilderView/widgets/PreviewQuestionContainer.dart';
 import 'package:interview_part2_survey_creator/providers/QuestionCreatorProvider.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
 import 'package:interview_part2_survey_creator/services/KeyboardService.dart';
 import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
 import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
@@ -17,9 +18,6 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
   @override
   String title;
 
-  @override
-  int rank;
-
   final SurveyQuestionType type = SurveyQuestionType.MultipleChoice;
 
   final QuestionCreatorProvider questionCreatorProvider;
@@ -28,7 +26,7 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
 
   List<String> optionTitles = List.generate(2, ((index) => 'Answer Choice $index...'));
 
-  SurveyQuestionMultipleChoice(this.title, this.rank, this.questionCreatorProvider);
+  SurveyQuestionMultipleChoice(this.title, this.questionCreatorProvider);
 
   @override
   Widget getForm() {
@@ -81,7 +79,6 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
   Widget getPreview() {
     return PreviewQuestionContainer(
       title: title,
-      rank: rank,
       content: EnvRadioButtonController(
         configs: List.generate(numOptions, (index) => EnvRadioButtonConfig(
             label: optionTitles[index],
@@ -117,7 +114,8 @@ class SurveyQuestionMultipleChoice implements SurveyQuestionable {
   Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
-      question: this
+      question: this,
+      isSelected: identical(SurveyProvider().selectedQuestion, this),
     );
   }
 

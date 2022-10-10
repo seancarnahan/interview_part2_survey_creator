@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
 import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/questionBuilderView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/EnvRadioButtonController.dart';
 import 'package:interview_part2_survey_creator/widgets/controls/models/EnvRadioButtonConfig.dart';
 import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
@@ -10,12 +11,9 @@ class SurveyQuestionBoolean implements SurveyQuestionable {
   @override
   String title;
 
-  @override
-  int rank;
-
   final SurveyQuestionType type = SurveyQuestionType.Boolean;
 
-  SurveyQuestionBoolean(this.title, this.rank);
+  SurveyQuestionBoolean(this.title);
 
   @override
   Widget getForm() {
@@ -26,7 +24,6 @@ class SurveyQuestionBoolean implements SurveyQuestionable {
   Widget getPreview() {
     return PreviewQuestionContainer(
       title: title,
-      rank: rank,
       content: EnvRadioButtonController(
         configs: [
           EnvRadioButtonConfig(
@@ -50,7 +47,8 @@ class SurveyQuestionBoolean implements SurveyQuestionable {
   Widget buildItem(int numIndents) {
     // TODO pass SurveyQuestionable type icon -> ex: boolean icon
     return QuestionFile(
-      question: this
+      question: this,
+      isSelected: identical(SurveyProvider().selectedQuestion, this),
     );
   }
 

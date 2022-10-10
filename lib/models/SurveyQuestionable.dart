@@ -27,3 +27,7 @@ enum SurveyQuestionType {
   MultipleChoice
 }
 
+enum QuestionActions {
+  Delete
+}
+

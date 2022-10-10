@@ -14,6 +14,7 @@ class EnvTextFieldConfig {
   final bool autoFocus;
   final Color color;
   final List<TextInputFormatter>? additionalFormatter;
+  final FocusNode? focusNode;
   
   EnvTextFieldConfig({
     this.prefix,
@@ -25,6 +26,7 @@ class EnvTextFieldConfig {
     this.inputTextStyle,
     this.autoFocus=false,
     this.color=BrandedColors.secondary500,
-    this.additionalFormatter
+    this.additionalFormatter,
+    this.focusNode
   });
 }

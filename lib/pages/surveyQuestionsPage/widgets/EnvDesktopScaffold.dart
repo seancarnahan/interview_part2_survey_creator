@@ -9,15 +9,21 @@ class EnvDesktopScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: const [
-          Flexible(
-            child: FoldersView()
-          ),
-          Expanded(
-            child: QuestionBuilderView(),
-          )
-        ],
+      body: SizedBox(
+        width: double.infinity,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: const [
+            FoldersView(),
+            Flexible(
+              fit: FlexFit.loose,
+              child: SizedBox(
+                child: QuestionBuilderView(),
+              )
+            )
+          ],
+        ),
       ),
     );
   }
