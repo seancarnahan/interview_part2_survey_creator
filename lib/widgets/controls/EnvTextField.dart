@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedTextStyle.dart';
+import 'package:interview_part2_survey_creator/services/KeyboardService.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedTextStyle.dart';
 
 import 'models/EnvTextFieldConfig.dart';
 

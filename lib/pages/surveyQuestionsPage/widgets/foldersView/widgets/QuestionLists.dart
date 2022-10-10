@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/models/SurveyFolder.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionBoolean.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFolder.dart';
+import 'package:interview_part2_survey_creator/models/SurveyFolder.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionBoolean.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFolder.dart';
 
 class QuestionLists extends StatelessWidget {
   const QuestionLists({Key? key}) : super(key: key);

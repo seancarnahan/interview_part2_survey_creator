@@ -1,10 +1,10 @@
 # Project-level configuration.
 cmake_minimum_required(VERSION 3.14)
-project(interview_survey_creator_simple LANGUAGES CXX)
+project(interview_part2_survey_creator LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change
 # the on-disk name of your application.
-set(BINARY_NAME "interview_survey_creator_simple")
+set(BINARY_NAME "interview_part2_survey_creator")
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/mock_old/SurveyProvider.dart';
+import 'package:interview_part2_survey_creator/mock_old/SurveyProvider.dart';
 
 import 'widgets/CollapsedQuestionBuilder.dart';
 import 'widgets/CreateQuestionButton.dart';

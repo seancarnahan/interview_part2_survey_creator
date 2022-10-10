@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionBoolean.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionMultipleChoice.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionNumber.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionText.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
-import 'package:interview_survey_creator_simple/mock_old/SurveyProvider.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionBoolean.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionMultipleChoice.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionNumber.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionText.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
+import 'package:interview_part2_survey_creator/mock_old/SurveyProvider.dart';
 
 class QuestionCreatorProvider extends ChangeNotifier {
   SurveyQuestionable question;

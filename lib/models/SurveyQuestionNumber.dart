@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
-import 'package:interview_survey_creator_simple/services/KeyboardService.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/EnvTextField.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/models/EnvTextFieldConfig.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/models/NumberFormatter.dart';
+import 'package:interview_part2_survey_creator/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_part2_survey_creator/services/KeyboardService.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/EnvTextField.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/EnvTextFieldConfig.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/NumberFormatter.dart';
 
 // import '../widgets/controls/models/CustomNumberRangeFormatter.dart';
 import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';

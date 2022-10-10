@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/FoldersView.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/questionBuilderView/QuestionBuilderView.dart';
-import 'package:interview_survey_creator_simple/services/ScreenSizeService.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
-import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetector.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/FoldersView.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/questionBuilderView/QuestionBuilderView.dart';
+import 'package:interview_part2_survey_creator/services/ScreenSizeService.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
+import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
 
 class EnvMobileScaffold extends StatelessWidget {
   const EnvMobileScaffold({Key? key}) : super(key: key);

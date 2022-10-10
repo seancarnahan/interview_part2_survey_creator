@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/EnvDropdown.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/models/EnvDropdownConfig.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/EnvDropdown.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/EnvDropdownConfig.dart';
 
 import '../../QuestionCreatorProvider.dart';
 

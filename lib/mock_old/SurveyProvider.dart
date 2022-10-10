@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/models/Survey.dart';
-import 'package:interview_survey_creator_simple/models/SurveyQuestionable.dart';
+import 'package:interview_part2_survey_creator/models/Survey.dart';
+import 'package:interview_part2_survey_creator/models/SurveyQuestionable.dart';
 
 /*
  * Singleton and ChangeNotifier(Provider):

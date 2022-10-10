@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
-import 'package:interview_survey_creator_simple/models/SurveyItemable.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/EnvRadioButtonController.dart';
-import 'package:interview_survey_creator_simple/widgets/controls/models/EnvRadioButtonConfig.dart';
+import 'package:interview_part2_survey_creator/mock_old/previewView/widgets/PreviewQuestionContainer.dart';
+import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/EnvRadioButtonController.dart';
+import 'package:interview_part2_survey_creator/widgets/controls/models/EnvRadioButtonConfig.dart';
 import '../pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFile.dart';
 import 'SurveyQuestionable.dart';
 

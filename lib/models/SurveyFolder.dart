@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/models/SurveyItemable.dart';
-import 'package:interview_survey_creator_simple/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFolder.dart';
+import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
+import 'package:interview_part2_survey_creator/pages/surveyQuestionsPage/widgets/foldersView/widgets/QuestionFolder.dart';
 
 class SurveyFolder implements SurveyItemable {
   String name;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/services/ScreenSizeService.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
+import 'package:interview_part2_survey_creator/services/ScreenSizeService.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
 
 import 'widgets/AddFolderOrFile.dart';
 import 'widgets/FoldersHeader.dart';

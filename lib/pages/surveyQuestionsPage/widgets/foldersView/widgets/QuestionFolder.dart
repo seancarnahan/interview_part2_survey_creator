@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/models/SurveyFolder.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedColors.dart';
-import 'package:interview_survey_creator_simple/styles/BrandedTextStyle.dart';
-import 'package:interview_survey_creator_simple/widgets/button/EnvGestureDetector.dart';
+import 'package:interview_part2_survey_creator/models/SurveyFolder.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedColors.dart';
+import 'package:interview_part2_survey_creator/styles/BrandedTextStyle.dart';
+import 'package:interview_part2_survey_creator/widgets/button/EnvGestureDetector.dart';
 
 // TODO: breakdown into smaller widgets
 class QuestionFolder extends StatefulWidget {

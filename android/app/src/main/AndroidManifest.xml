@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.interview_survey_creator_simple">
+    package="com.example.interview_part2_survey_creator">
    <application
-        android:label="interview_survey_creator_simple"
+        android:label="interview_part2_survey_creator"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

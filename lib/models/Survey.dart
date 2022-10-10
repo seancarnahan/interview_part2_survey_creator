@@ -1,4 +1,4 @@
-import 'package:interview_survey_creator_simple/models/SurveyItemable.dart';
+import 'package:interview_part2_survey_creator/models/SurveyItemable.dart';
 
 import 'SurveyQuestionable.dart';
 

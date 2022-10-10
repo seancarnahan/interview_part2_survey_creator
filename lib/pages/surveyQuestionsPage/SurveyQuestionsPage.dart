@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:interview_survey_creator_simple/providers/SurveyProvider.dart';
-import 'package:interview_survey_creator_simple/services/ScreenSizeService.dart';
+import 'package:interview_part2_survey_creator/providers/SurveyProvider.dart';
+import 'package:interview_part2_survey_creator/services/ScreenSizeService.dart';
 import 'package:provider/provider.dart';
 
 import 'widgets/EnvDesktopScaffold.dart';
@@ -14,9 +14,9 @@ class SurveyQuestionsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool isMobile = MediaQuery.of(context).size.width < ScreenSizeService.MobileBreakpointDown;
-    return Provider(
-      create: () => SurveyProvider()
-    );
+    // return Provider(
+    //   create: () => SurveyProvider()
+    // );
 
     if (isMobile) {
       return const EnvMobileScaffold();

@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "interview_survey_creator_simple" "\0"
+            VALUE "FileDescription", "interview_part2_survey_creator" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "interview_survey_creator_simple" "\0"
+            VALUE "InternalName", "interview_part2_survey_creator" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "interview_survey_creator_simple.exe" "\0"
-            VALUE "ProductName", "interview_survey_creator_simple" "\0"
+            VALUE "OriginalFilename", "interview_part2_survey_creator.exe" "\0"
+            VALUE "ProductName", "interview_part2_survey_creator" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

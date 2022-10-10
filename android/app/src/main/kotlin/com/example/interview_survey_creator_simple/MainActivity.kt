@@ -1,4 +1,4 @@
-package com.example.interview_survey_creator_simple
+package com.example.interview_part2_survey_creator
 
 import io.flutter.embedding.android.FlutterActivity
 
