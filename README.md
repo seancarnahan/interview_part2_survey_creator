@@ -11,7 +11,6 @@ This project is tool created for an interview with Enveritas that allows users t
 ## Structure
 - Majority of code is in /lib
 - /ios, /macos, /web, /linux, /windows, /android are used for specific configuration options for their corresponding device(ex: controlling release versioning)
-- /constants -> Just has device constraints
 - /models -> Survey Object has a list of type SurveyQuestionable(abstract) which has 4 classes that implement it(text, boolean, number, multiple choice)
 - /providers -> State Management: https://pub.dev/packages/provider
   - SurveyProvider -> has all the actions that can performed on a survey and updates is corresponding members with the changes
@@ -21,7 +20,20 @@ This project is tool created for an interview with Enveritas that allows users t
 
 ## Disclaimers
 - Used styling and assets from https://enveritas.org
-- Used a mobile first approach
+- Have Lots of Room for improvement:
+  - Widgets could be broken down more
+  - Naming Conventions could have been more standardized and uniform
+  - Would like to make "root" at least to extend FolderProvider and then break apart SurveyProvider states into their own state management
+  - Could have made some Widgets like NewFolder More Reusable
+  - SurveyProvider delete functionality is a mess
+- Unfinished Functionality:
+  - As a survey creator, I should be able to move existing questions and folders
+  - When moving a folder, its contents should move with it and remain in the same order.
+  - When moving a file or folder, I should be able to move it to a new target folder
+  - When moving a file or folder, I should be able to move it to the "root" of a survey, outside of any particular folder.
+  - As a survey creator, I should be able to easily locate any particular question within a survey.
+  - Should be able to click on a question and edit it
+
 - Majority of widgets in interview_survey_creator/widgets are from previous side project that I have written
 
 ## Flutter Doctor Summary:
